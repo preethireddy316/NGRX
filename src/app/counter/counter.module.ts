@@ -14,7 +14,6 @@ const routes :Routes=[{path:'',component:CounterComponent}]
 @NgModule({
     declarations:[CounterComponent,CounterButtonsComponent,CounterOutputComponent,CustomCounterInputComponent],
     imports:[RouterModule.forChild(routes),StoreModule.forFeature('counter',counterReducer),CommonModule,ReactiveFormsModule,FormsModule],
-
 })
 
 export class CounterModule{

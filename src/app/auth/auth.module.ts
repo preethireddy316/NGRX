@@ -6,15 +6,18 @@ import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { AuthReducer, AUTH_STATE_NAME } from './state/auth.reducer';
 import { AuthEffects } from './state/auth.effects';
+import { EffectsModule } from '@ngrx/effects';
 
 const routes:Routes = [{path:'',
 children:[{path:"",redirectTo :"login",pathMatch:'full'},{path:'login',component:LoginComponent}
 ]}]
 
 @NgModule({
-    imports:[CommonModule,RouterModule.forChild(routes),StoreModule.forFeature(AUTH_STATE_NAME,AuthReducer),ReactiveFormsModule],declarations:[LoginComponent,AuthEffects]
+    imports:[CommonModule,EffectsModule.forFeature([AuthEffects]),RouterModule.forChild(routes)
+    ,
+    // StoreModule.forFeature(AUTH_STATE_NAME,AuthReducer),
+    ReactiveFormsModule],declarations:[LoginComponent]
 })
-
 
 export class AuthModule{
 

@@ -1,7 +1,7 @@
+import { PostState } from './../state/post.state';
 import { getPosts } from './../state/post.selector';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/state/app.state';
 
 @Component({
   selector: 'app-postslist',
@@ -10,7 +10,7 @@ import { AppState } from 'src/app/state/app.state';
 })
 export class PostslistComponent implements OnInit {
 posts:any;
-constructor(private store:Store<AppState>){
+constructor(private store:Store<PostState>){
 }
 
 ngOnInit(): void {
