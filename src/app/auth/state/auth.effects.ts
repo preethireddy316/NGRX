@@ -36,7 +36,6 @@ import { Injectable } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { TypedAction } from '@ngrx/store/src/models';
 import { Observable, of } from 'rxjs';
-import { User } from 'src/app/model/user.model';
 import { Router } from '@angular/router';
 
 @Injectable()

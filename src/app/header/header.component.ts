@@ -1,3 +1,4 @@
+import { AppState } from 'src/app/store/app.state';
 import { isAuthenticated } from './../auth/state/auth.selector';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs';
 export class HeaderComponent {
   isAuthenticated:Observable<boolean>
 
-  constructor(private store:Store<AuthState>){
+  constructor(private store:Store<AppState>){
     this.isAuthenticated=this.store.select(isAuthenticated)
     console.log(this.isAuthenticated,"header")
 

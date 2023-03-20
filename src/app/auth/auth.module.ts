@@ -13,9 +13,8 @@ children:[{path:"",redirectTo :"login",pathMatch:'full'},{path:'login',component
 ]}]
 
 @NgModule({
-    imports:[CommonModule,EffectsModule.forFeature([AuthEffects]),RouterModule.forChild(routes)
-    ,
-    // StoreModule.forFeature(AUTH_STATE_NAME,AuthReducer),
+    imports:[CommonModule,EffectsModule.forFeature([AuthEffects]),RouterModule.forChild(routes),
+    StoreModule.forFeature('auth',AuthReducer),
     ReactiveFormsModule],declarations:[LoginComponent]
 })
 

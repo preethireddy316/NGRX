@@ -1,6 +1,5 @@
 import { Post } from './../../model/model.post';
 
-interface PostsState{posts:Post[]}
 
 export interface PostState{
     posts:Post[]

@@ -12,17 +12,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 import { AuthModule } from './auth/auth.module';
-import { appReducer } from './store/app.state';
+// import { appReducer } from './store/app.state';
+// import { AuthEffects } from './auth/state/auth.effects';
+// import { AuthReducer } from './auth/state/auth.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,LoadingSpinnerComponent,
     HomeComponent,
     HeaderComponent,
-  ],
-  imports: [
-    BrowserModule,FormsModule,HttpClientModule,ReactiveFormsModule,AuthModule,EffectsModule.forRoot([]),
-    AppRoutingModule,StoreModule.forRoot(appReducer),StoreDevtoolsModule.instrument({
+  ],imports: [
+    BrowserModule,FormsModule,HttpClientModule,ReactiveFormsModule,AuthModule,EffectsModule.forRoot([]),AppRoutingModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode
       autoPause: true, // Pauses recording actions and state changes when the extension window is not open

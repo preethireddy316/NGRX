@@ -1,4 +1,3 @@
-import { AppState } from 'src/app/store/app.state';
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { sharedState } from "./shared.state";
 
